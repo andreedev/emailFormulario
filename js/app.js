@@ -13,9 +13,9 @@ const resetBtn = document.getElementById('resetBtn');
     document.addEventListener('DOMContentLoaded', inicioApp);
     
     //Campos del formulario
-    email.addEventListener('blur', validarCampo);
-    asunto.addEventListener('blur', validarCampo);
-    mensaje.addEventListener('blur', validarCampo);
+    email.addEventListener('keyup', validarCampo);
+    asunto.addEventListener('keyup', validarCampo);
+    mensaje.addEventListener('keyup', validarCampo);
     
     //Boton de enviar  en el submit
     // formularioEnviar.addEventListener('submit', enviarEmail);
@@ -51,6 +51,8 @@ function validarCampo() {
         if (errores.length === 0){
             btnEnviar.disabled = false;
         }
+    } else{
+        btnEnviar.disabled = true;
     }
 }
 
@@ -74,7 +76,7 @@ function enviarEmail(e) {
     enviado.src = 'img/mail.gif';
     enviado.style.display = 'block';
     
-    //Ocultar Spinner y mostrar gif de eviad
+    //Ocultar Spinner y mostrar gif de enviado
     
     setTimeout(() => {
         spinnerGif.style.display = 'none';
@@ -83,7 +85,7 @@ function enviarEmail(e) {
         setTimeout(() => {
             enviado.remove();
             formularioEnviar.reset();
-        }, 5000);
+        }, 3000);
     }, 3000);
 }
 
