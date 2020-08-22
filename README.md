@@ -1,6 +1,4 @@
 # emailFormulario
-A email form made in JS
+Un formulario para enviar un correo electrónico, desarrollado en JS, usando Materialize como framework CSS.
 
-Test: https://email-formulario.netlify.app/
-
-Note: It not use backend, so it not send real messages to an email.
+See: https://email-formulario.netlify.app/
